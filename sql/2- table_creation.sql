@@ -1,3 +1,16 @@
+/*
+ENGINE = InnoDB
+Specifies the storage engine for the MySQL table.
+InnoDB is the default and most widely used storage engine in MySQL.
+Key features of InnoDB:
+- Supports ACID-compliant transactions (ensures data reliability).
+- Provides row-level locking for better concurrency in multi-user environments.
+- Supports foreign keys for referential integrity between tables.
+- Handles crash recovery automatically to prevent data loss.
+Using InnoDB is recommended for tables that require transactional integrity,
+high performance, and relational constraints.
+*/
+
 
 CREATE TABLE customers (
 	customer_id VARCHAR(32) NOT NULL,
