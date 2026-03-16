@@ -1,7 +1,7 @@
 /*
 DEFAULT CHARACTER SET utf8mb4
 Sets the default character encoding for the database or table.
-utf8mb4 is a full UTF-8 implementation supporting all Unicode characters,
+utfz8mb4 is a full UTF-8 implementation supporting all Unicode characters,
 including emojis, special symbols, and characters from all languages.
 It uses up to 4 bytes per character for full international text compatibility.
 
@@ -19,7 +19,7 @@ letters, numbers, symbols, emojis, and scripts from all languages.
 It allows consistent storage and display of international text.
 Encodings like UTF-8 (used by utf8mb4) store these Unicode characters in databases
 and applications reliably.
-*/
+*//
 
 
 CREATE DATABASE olist_ecommerce_db
