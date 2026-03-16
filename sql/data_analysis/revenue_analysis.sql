@@ -86,19 +86,30 @@ ON p.product_id = oi.product_id
 WHERE oi.product_id IS NULL;
 
 
+-- Top 10 Products by Revenue
+-- Goal: Identify the products that generate the highest revenue from delivered orders
+SELECT
+    oi.product_id,
+    p.product_category_name,
+    COUNT(*) AS total_units_sold,
+    SUM(oi.price) AS total_revenue
+FROM order_items oi
+JOIN orders o
+    ON oi.order_id = o.order_id
+JOIN products p
+    ON oi.product_id = p.product_id
+WHERE o.order_status = 'delivered'
+GROUP BY oi.product_id, p.product_category_name
+ORDER BY total_revenue DESC
+LIMIT 10;
+
+
+
+
+
 
 SELECT * FROM customers LIMIT 3;   
 SELECT * FROM orders LIMIT 3;
 SELECT * FROM order_items LIMIT 3; 
 SELECT * FROM products LIMIT 3;
--- top 10 products by revenue
-SELECT
-	product_id,
-    COUNT( order_id) AS total_orders,
-    SUM(price) AS total_revenue
-FROM order_items
-GROUP BY product_id
-ORDER BY total_revenue DESC
-LIMIT 10;
-
     
