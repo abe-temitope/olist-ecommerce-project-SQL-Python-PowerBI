@@ -57,10 +57,17 @@ ORDER BY
 Top Product Categories by Revenue
 Goal: Identify which product categories generate the most revenue
 Tables: orders, order_items, products, product_category_name_translation
+
+Tables Used:
+orders
+order_items
+products
+product_category_name_translation
 */
 SELECT
     replace(p.product_category_name, '_', ' ') AS product_category,
 	replace(pcnt.product_category_name_english, '_', ' ') AS english_name,
+    COUNT(*) AS unit_sold,
     ROUND(SUM(oi.price),2) AS total_revenue
 FROM orders o
 JOIN order_items oi 
@@ -77,17 +84,18 @@ ORDER BY total_revenue DESC
 LIMIT 10;
 
 
-SELECT
-p.product_id,
-p.product_category_name
-FROM products p
-LEFT JOIN order_items oi
-ON p.product_id = oi.product_id
-WHERE oi.product_id IS NULL;
 
 
--- Top 10 Products by Revenue
--- Goal: Identify the products that generate the highest revenue from delivered orders
+/* 
+Analysis: Top 10 Products by Revenue
+Business Question:
+Which products generate the highest revenue on the platform?
+
+Tables Used:
+orders
+order_items
+products
+*/
 SELECT
     oi.product_id,
     p.product_category_name,
@@ -103,13 +111,4 @@ GROUP BY oi.product_id, p.product_category_name
 ORDER BY total_revenue DESC
 LIMIT 10;
 
-
-
-
-
-
-SELECT * FROM customers LIMIT 3;   
-SELECT * FROM orders LIMIT 3;
-SELECT * FROM order_items LIMIT 3; 
-SELECT * FROM products LIMIT 3;
     
