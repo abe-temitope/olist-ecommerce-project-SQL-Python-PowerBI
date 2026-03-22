@@ -46,7 +46,7 @@ The data spans from 2016 to 2018.
 
 ---
 
-## SQL Views
+## Sample Analysis
 
 ### 1. Revenue by State View
 
