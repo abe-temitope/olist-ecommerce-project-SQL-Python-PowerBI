@@ -304,7 +304,7 @@ plt.show()
 ### Chart Output
 
 ```markdown
-![Monthly Revenue Trend](images/matplotlib_seaborne/monthly_revenue_trend.png)
+![Monthly Revenue Trend](images/matplotlib/monthly_revenue_trend.png)
 ```
 
 ---
@@ -331,7 +331,7 @@ plt.show()
 (Add chart image here)
 
 ```markdown
-![Product Segmentation](images/matplotlib_seaborne/product_segmentation.png)
+![Product Segmentation](images/matplotlib/product_segmentation.png)
 ```
 
 ---
@@ -359,7 +359,7 @@ plt.show()
 (Add chart image here)
 
 ```markdown
-![RFM Segments](images/matplotlib_seaborne/rfm_segments.png)
+![RFM Segments](images/matplotlib/rfm_segments.png)
 ```
 
 ---

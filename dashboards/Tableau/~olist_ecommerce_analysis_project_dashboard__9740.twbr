@@ -2855,7 +2855,7 @@
             <column caption='Net Revenue' datatype='real' name='[Calculation_685391633113206784]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='// Total revenue&#13;&#10;SUM(&#13;&#10;IF [order_status] = &quot;delivered&quot;&#13;&#10;THEN [price]&#13;&#10;END&#13;&#10;)' />
             </column>
-            <column-instance column='[order_delivered_customer_date]' derivation='None' name='[none:order_delivered_customer_date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_delivered_customer_date]' derivation='MDY' name='[md:order_delivered_customer_date:ok]' pivot='key' type='ordinal' />
             <column caption='Order Delivered Customer Date' datatype='datetime' name='[order_delivered_customer_date]' role='dimension' type='ordinal' />
             <column caption='Order Status' datatype='string' name='[order_status]' role='dimension' type='nominal' />
             <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
@@ -2875,7 +2875,7 @@
           </style-rule>
         </style>
         <panes>
-          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -2892,7 +2892,7 @@
           </pane>
         </panes>
         <rows>[federated.17paw4n0de78uy18sandb0ri7o8g].[usr:Calculation_685391633113206784:qk]</rows>
-        <cols>[federated.17paw4n0de78uy18sandb0ri7o8g].[none:order_delivered_customer_date:qk]</cols>
+        <cols>[federated.17paw4n0de78uy18sandb0ri7o8g].[md:order_delivered_customer_date:ok]</cols>
       </table>
       <simple-id uuid='{97A65F3B-783E-4006-93FF-13FE381C4272}' />
     </worksheet>
