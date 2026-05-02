@@ -328,8 +328,6 @@ plt.show()
 
 ### Chart Output
 
-(Add chart image here)
-
 ```markdown
 ![Product Segmentation](images/matplotlib/product_segmentation.png)
 ```
@@ -355,8 +353,6 @@ plt.show()
 ```
 
 ### Chart Output
-
-(Add chart image here)
 
 ```markdown
 ![RFM Segments](images/matplotlib/rfm_segments.png)
