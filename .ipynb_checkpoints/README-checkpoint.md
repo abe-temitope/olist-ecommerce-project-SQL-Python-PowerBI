@@ -303,9 +303,7 @@ plt.show()
 
 ### Chart Output
 
-```markdown
 ![Monthly Revenue Trend](reports/visuals/mat_monthly_revenue.png)
-```
 
 ---
 
@@ -327,9 +325,8 @@ plt.show()
 ```
 
 ### Chart Output
-```markdown
+
 ![Product Segmentation](reports/visuals/mat_product_segmentation.png)
-```
 
 ---
 
@@ -353,9 +350,7 @@ plt.show()
 
 ### Chart Output
 
-```markdown
 ![RFM Segments](reports/visuals/mat_rfm_segments.png)
-```
 
 ---
 
